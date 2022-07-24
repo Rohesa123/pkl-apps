@@ -79,7 +79,7 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content pt-3 pb-3">
       @yield('content')
       <!-- /.container-fluid -->
     </section>

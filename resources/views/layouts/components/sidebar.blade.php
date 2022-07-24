@@ -49,32 +49,34 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{route('post.index')}}" class="nav-link">
-                  <i class="fas fa-angle-right nav-icon"></i> 
+                  <i class="far fa-circle nav-icon nav-icon"></i> 
                   <p>Data Post</p>
                 </a>
               </li>
-              <li class="nav-item menu">
-                <a href="#" class="nav-link active">
-                  <i class="fas fa-server nav-icon"></i>
-                  <p>Data Sekolah</p>
-                  <i class="right fas fa-angle-left"></i> 
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-server"></i>
+                  <p>
+                    Data Sekolah
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
                 </a>
-                <ul class="nav nav-treeview ms-3">
+                <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="{{route('siswa.index')}}" class="nav-link">
-                      <i class="fas fa-angle-right nav-icon"></i>
+                      <i class="far fa-circle nav-icon"></i>
                       <p>Data Siswa</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="{{route('nilai.index')}}" class="nav-link">
-                      <i class="fas fa-angle-right nav-icon"></i>
+                      <i class="far fa-circle nav-icon"></i>
                       <p>Data Nilai</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{route('jurusan.index')}}" class="nav-link">
-                      <i class="fas fa-angle-right nav-icon"></i>
+                    <a href="{{route('siswa.index')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
                       <p>Data Jurusan</p>
                     </a>
                   </li>
