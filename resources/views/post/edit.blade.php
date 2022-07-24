@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @include('layouts._flash')
-                <div class="card border-secondary">
+                <div class="card border-secondary bg-dark text-light">
                     <div class="card-header mb-3">Data Posts </div>
 
                     <div class="card-body">
@@ -33,9 +33,12 @@
                                 @enderror
                             </div>
 
-                            <div class="mb-3">
-                                <div class="d-grid gap-2">
+                            <div class="mb-3 d-flex justify-content-center">
+                                <div class="d-flex justify-content-evenly w-25">
                                     <button class="btn btn-primary" type="submit">Save</button>
+                                    <a href="{{ route('post.index') }}"
+                                        class="btn btn-sm btn-danger pt-2">Kembali
+                                    </a>
                                 </div>
                             </div>
                         </form>

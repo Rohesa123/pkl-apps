@@ -23,6 +23,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/test-admin', function() {
+    return view('layouts.admin');
+});
+
+Route::get('/hallo', function() {
+    return view('halo');
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('post',PostController::class);

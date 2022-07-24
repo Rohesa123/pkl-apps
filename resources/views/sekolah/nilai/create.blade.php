@@ -43,13 +43,21 @@
                             </div>
                             <div class="mb-3">
                                 <label for="grade">Indeks Nilai</label>
-                                <input type="text" name="" value="" id="grade" readonly placeholder="Nilai Grade"
-                                    class="form-control">
+                                <input type="text" name="indeks_nilai" value="" id="grade" readonly placeholder="Nilai Grade"
+                                    class="form-control @error('indeks_nilai') is-invalid @enderror">
                             </div>
+                            @error('indeks_nilai')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
 
-                            <div class="mb-3">
-                                <div class="d-grid gap-2">
+                            <div class="mb-3 d-flex justify-content-center">
+                                <div class="d-flex justify-content-evenly w-25">
                                     <button class="btn btn-primary" type="submit">Save</button>
+                                    <a href="{{ route('nilai.index') }}"
+                                        class="btn btn-sm btn-danger pt-2">Kembali
+                                    </a>
                                 </div>
                             </div>
                         </form>

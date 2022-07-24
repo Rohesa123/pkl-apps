@@ -67,14 +67,15 @@ class NilaiController extends Controller
         $validate = $request->validate([
             'nis' => 'required|unique:nilais',
             'kode_mata_pelajaran' => 'required|unique:nilais',
-            'nilai' => 'required'
+            'nilai' => 'required',
+            'indeks_nilai' => 'required'
         ]);
 
         $nilai = new Nilai();
         $nilai->nis = $request->nis;
         $nilai->kode_mata_pelajaran = $request->kode_mata_pelajaran;
         $nilai->nilai = $request->nilai;
-        $nilai->indeks_nilai = $this->indeksNilai($nilai->nilai);
+        $nilai->indeks_nilai = $request->indeks_nilai;
         
         $nilai->save();
 
@@ -120,14 +121,15 @@ class NilaiController extends Controller
         $validate = $request->validate([
             'nis' => 'required|unique:nilais',
             'kode_mata_pelajaran' => 'required|unique:nilais',
-            'nilai' => 'required'
+            'nilai' => 'required',
+            'indeks_nilai' => 'required'
         ]);
 
         $nilai = Nilai::FindOrFail($id);
         $nilai->nis = $request->nis;
         $nilai->kode_mata_pelajaran = $request->kode_mata_pelajaran;
         $nilai->nilai = $request->nilai;    
-        $nilai->indeks_nilai = $this->indeksNilai($nilai->nilai);
+        $nilai->indeks_nilai = $request->indeks_nilai;
 
         $nilai->save();
 

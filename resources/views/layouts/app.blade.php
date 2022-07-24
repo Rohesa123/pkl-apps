@@ -24,11 +24,16 @@
     <link rel="stylesheet" href="Bootstrap-Icon/node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <style>
         label {
-            /* text-align: center; */
             display:inline-flex;
+            margin: 5px 0;
         }
+
         label * {
             margin: 0 5px;
+        }
+
+        body {
+            background: #2C3333;
         }
     </style>
 </head>
@@ -59,6 +64,9 @@
                                 <li><a class="dropdown-item" href="{{ route('jurusan.index') }}">Jurusan</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('login')}}" class="nav-link">Dashboard</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -82,7 +90,7 @@
                                     {{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

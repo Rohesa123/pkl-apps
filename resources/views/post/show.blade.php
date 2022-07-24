@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @include('layouts._flash')
-                <div class="card border-secondary">
+                <div class="card border-secondary bg-dark text-light">
                     <div class="card-header mb-3">Data Posts </div>
 
                     <div class="card-body">
@@ -16,8 +16,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="">Content</label>
-                            <textarea type="text"name="content" class="form-control" readonly>{{ $post->content }}
-                                </textarea>
+                            <textarea type="text"name="content" class="form-control" readonly>{{ $post->content }}</textarea>
 
                         </div>
 

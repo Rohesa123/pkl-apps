@@ -5,8 +5,8 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @include('layouts._flash')
-                <div class="card border-secondary">
-                    <div class="card-header mb-3">Data Posts
+                <div class="card border-secondary bg-dark text-light">
+                    <div class="card-header mb-3">Data Post
                         <a href="{{ route('post.create') }}"
                             class="btn btn-sm btn-primary" style="float: right;"><i class="bi bi-plus-square pe-2"></i>Add Data
                         </a>
@@ -14,7 +14,7 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table align-middle" id="dataTable">
+                            <table class="table align-middle text-light" id="dataTable">
                                 <thead>
                                     <tr>
                                         <th>No</th>
@@ -39,7 +39,7 @@
                                                     </a> |
                                                     <a href="{{ route('post.show', $data->id) }}"
                                                         class="btn btn-sm btn-outline-info"><i class="bi bi-eye-fill pe-2"></i>Show
-                                                    </a>
+                                                    </a> |
                                                     <button type="submit" class="btn btn-sm btn-outline-danger"
                                                         onclick="return confirm('Are You Sure?')"><i class="bi bi-trash pe-2"></i>Delete</button>
                                                 </form>

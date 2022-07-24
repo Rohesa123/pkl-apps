@@ -50,9 +50,12 @@
                                 @enderror
                             </div>
 
-                            <div class="mb-3">
-                                <div class="d-grid gap-2">
+                            <div class="mb-3 d-flex justify-content-center">
+                                <div class="d-flex justify-content-evenly w-25">
                                     <button class="btn btn-primary" type="submit">Save</button>
+                                    <a href="{{ route('siswa.index') }}"
+                                        class="btn btn-sm btn-danger pt-2">Kembali
+                                    </a>
                                 </div>
                             </div>
                         </form>

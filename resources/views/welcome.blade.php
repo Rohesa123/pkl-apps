@@ -4,10 +4,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card bg-dark text-light">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <h3 class="ps-3">
+                <h3 class="ps-3" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
                     Ini Halaman Login
                 </h3>
             </div>
