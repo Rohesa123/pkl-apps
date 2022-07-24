@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
   <meta charset="utf-8">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Dashboard</title>
-
+  <!-- Bootstrap -->
+  <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Data Tables Bootstrap -->
+  <link rel="stylesheet" href="text/css" href="{{asset('DataTables/datatables.min.css')}}">
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet" href="{{asset('Bootstrap-Icon/node_modules/bootstrap-icons/font/bootstrap-icons.css')}}">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -25,6 +31,7 @@
   <link rel="stylesheet" href="{{asset('assets/plugins/daterangepicker/daterangepicker.css')}}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('assets/plugins/summernote/summernote-bs4.min.css')}}">
+ 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -94,7 +101,6 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
 <!-- jQuery -->
 <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -129,5 +135,48 @@
 <script src="{{asset('assets/dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('assets/dist/js/pages/dashboard.js')}}"></script>
+<!-- jquery -->
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<!-- Data Tables Bootstrap -->
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<!-- Data Tables Bootstrap -->
+<script>
+    $(document).ready(function() {
+        $('#dataTable').dataTable();
+    });
+</script>
+<!-- Grade Nilai -->
+<script>
+    let input = document.querySelector('#input_nilai')
+    let grade = document.querySelector('#grade');
+
+    function indek(a) {
+        if(a <= 100 && a >= 90) {
+            return "A";
+        } else if(a < 90 && a >= 80) {
+            return "B";
+        } else if(a < 80 && a >= 70) {
+            return "C";
+        } else if(a < 70 && a >= 50) {
+            return "D";
+        } else if(a < 50 && a >= 30) {
+            return "E";
+        } else if(a < 30 && a >= 0) {
+            return "F";
+        } else {
+            return "Grade error!"
+        }
+    }
+
+    input.addEventListener('click',function saya() {
+        nilai = document.getElementById("input_nilai").value;
+        grade.setAttribute('value',indek(nilai));
+    });
+
+    input.addEventListener('keyup',function saya() {
+        nilai = document.getElementById("input_nilai").value;
+        grade.setAttribute('value',indek(nilai));
+    });
+</script>
 </body>
 </html>

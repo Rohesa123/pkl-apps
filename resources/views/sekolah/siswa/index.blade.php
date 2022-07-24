@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
     <div class="container">
@@ -16,7 +16,7 @@
                         <div class="table-responsive">
                             <table class="table align-middle" id="dataTable">
                                 <thead>
-                                    <tr class="table-dark">
+                                    <tr>
                                         <th>No</th>
                                         <th>Nis</th>
                                         <th>Nama Siswa</th>
@@ -28,7 +28,7 @@
                                 <tbody>
                                     @php $no = 1; @endphp
                                     @foreach ($siswa as $data)
-                                        <tr class="table-dark">
+                                        <tr>
                                             <td>{{ $no++ }}</td>
                                             <td>{{ $data->nis }}</td>
                                             <td>{{ $data->nama_siswa }}</td>

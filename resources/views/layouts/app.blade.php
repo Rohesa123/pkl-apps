@@ -64,9 +64,6 @@
                                 <li><a class="dropdown-item" href="{{ route('jurusan.index') }}">Jurusan</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{route('login')}}" class="nav-link">Dashboard</a>
-                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

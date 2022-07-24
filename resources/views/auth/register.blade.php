@@ -17,7 +17,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="{{url('/admin')}}"><b>Admin</b>LTE</a>
+    <a href="{{url('/')}}"><b>Admin</b>LTE</a>
   </div>
 
   <div class="card">
