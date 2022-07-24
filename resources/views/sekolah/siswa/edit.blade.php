@@ -5,10 +5,10 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @include('layouts._flash')
-                <div class="card border-secondary bg-dark text-light">
-                    <div class="card-header mb-3">Data Siswa</div>
+                <div class="card border-secondary bg-navy text-light">
+                    <div class="card-header mb-3 border-bottom border-1">Data Siswa</div>
 
-                    <div class="card-body bg-dark text-light">
+                    <div class="card-body text-light">
                         <form action="{{ route('siswa.update', $siswa->id) }}" method="post">
                             @method('put')
                             @csrf
@@ -51,7 +51,7 @@
                             </div>
 
                             <div class="mb-3 d-flex justify-content-center">
-                                <div class="d-flex justify-content-evenly w-25">
+                                <div class="d-flex justify-content-evenly w-50">
                                     <button class="btn btn-primary" type="submit">Save</button>
                                     <a href="{{ route('siswa.index') }}"
                                         class="btn btn-sm btn-danger pt-2">Kembali

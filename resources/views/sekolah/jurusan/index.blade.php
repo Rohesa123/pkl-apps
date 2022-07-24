@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 @include('layouts._flash')
                 <div class="card text-light bg-navy border-secondary">
-                    <div class="card-header mb-3">Data Jurusan
+                    <div class="card-header mb-3 border-bottom border-1">Data Jurusan
                         <a href="{{ route('jurusan.create') }}"
                             class="btn btn-sm btn-primary" style="float: right;"><i class="bi bi-plus-square pe-2"></i>Add Data
                         </a>

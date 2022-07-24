@@ -5,8 +5,8 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @include('layouts._flash')
-                <div class="card border-secondary bg-dark text-light">
-                    <div class="card-header mb-3">Data Nilai</div>
+                <div class="card border-secondary bg-navy text-light">
+                    <div class="card-header mb-3 border-bottom border-1">Data Nilai</div>
 
                     <div class="card-body">
 

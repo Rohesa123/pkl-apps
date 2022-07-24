@@ -5,11 +5,10 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @include('layouts._flash')
-                <div class="card border-secondary bg-dark text-light">
-                    <div class="card-header mb-3">Data Posts </div>
+                <div class="card border-secondary bg-navy text-light">
+                    <div class="card-header mb-3 border-bottom border-1">Data Posts </div>
 
                     <div class="card-body">
-
                         <div class="mb-3">
                             <label for="">Title</label>
                             <input type="text" name="title" value="{{ $post->title }}" class="form-control" readonly>

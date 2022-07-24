@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 @include('layouts._flash')
                 <div class="card text-light bg-navy border-secondary">
-                    <div class="card-header mb-3">Data Nilai
+                    <div class="card-header mb-3 border-bottom border-1">Data Nilai
                         <a href="{{ route('nilai.create') }}"
                             class="btn btn-sm btn-primary" style="float: right;"><i class="bi bi-plus-square pe-2"></i>Add Data
                         </a>
