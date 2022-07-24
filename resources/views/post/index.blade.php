@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @include('layouts._flash')
-                <div class="card border-secondary bg-dark text-light">
+                <div class="card border-secondary bg-navy text-light">
                     <div class="card-header mb-3">Data Post
                         <a href="{{ route('post.create') }}"
                             class="btn btn-sm btn-primary" style="float: right;"><i class="bi bi-plus-square pe-2"></i>Add Data

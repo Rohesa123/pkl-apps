@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar sidebar-dark-primary bg-gray-dark ">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
@@ -54,7 +54,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link active">
                   <i class="nav-icon fas fa-server"></i>
                   <p>
                     Data Sekolah

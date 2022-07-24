@@ -5,14 +5,14 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @include('layouts._flash')
-                <div class="card text-light bg-dark border-secondary">
+                <div class="card text-light bg-navy border-secondary">
                     <div class="card-header mb-3">Data Siswa
                         <a href="{{ route('siswa.create') }}"
                             class="btn btn-sm btn-primary" style="float: right;"><i class="bi bi-plus-square pe-2"></i>Add Data
                         </a>
                     </div>
 
-                    <div class="card-body bg-dark border-primary">
+                    <div class="card-body border-primary">
                         <div class="table-responsive">
                             <table class="table align-middle" id="dataTable">
                                 <thead>

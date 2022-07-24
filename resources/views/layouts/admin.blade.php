@@ -59,9 +59,9 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper bg-white">
     <!-- Content Header (Page header) -->
-    <div class="content-header">
+    <div class="content-header bg-navy">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
@@ -86,7 +86,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
+  <footer class="main-footer bg-navy">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
