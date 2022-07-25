@@ -47,6 +47,12 @@
     body {
       background: #2C3333;
     }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">

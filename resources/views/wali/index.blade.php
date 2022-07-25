@@ -25,7 +25,7 @@
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $data->nama }}</td>
                                         <td>
-                                            <img src="{{ $data->image() }}" style="width: 100px; height:100px;"
+                                            <img src="{{ $data->image() }}" style="width: 100px; height:100px; border-radius: 5px;"
                                                 alt="Error 404">
                                         </td>
                                         <td>{{ $data->siswa->nama_siswa }}</td>
