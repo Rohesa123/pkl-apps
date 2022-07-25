@@ -27,8 +27,8 @@ class Wali extends Model
 
     public function deleteImage()
     {
-        if ($this->foto && file_exists(public_path('images/wali'.$this->foto))) {
-            return unlink(public_path('images/wali'.$this->foto));
+        if ($this->foto && file_exists(public_path('images/wali/'.$this->foto))) {
+            return unlink(public_path('images/wali/'.$this->foto));
         }
     }
 }

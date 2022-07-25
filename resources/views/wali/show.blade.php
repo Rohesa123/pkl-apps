@@ -17,8 +17,15 @@
                             <label class="form-label">Foto Wali</label>
                             @if (isset($wali) && $wali->foto)
                                 <p>
-                                    <img src="{{ asset('images/wali/' . $wali->foto) }}" class="img-rounded img-responsive"
-                                        style="width: 75px; height:75px;" alt="">
+                                    @if ($wali->foto && file_exists(public_path('images/wali/'.$wali->foto)))
+                                    <img src="{{ asset('images/wali/' . $wali->foto) }}"
+                                        class="img-rounded img-responsive" style="width: 75px; height:75px;"
+                                        alt="">
+                                    @else
+                                    <img src="{{ asset('images/' . $wali->foto) }}"
+                                        class="img-rounded img-responsive" style="width: 75px; height:75px;"
+                                        alt="">
+                                    @endif
                                 </p>
                             @endif
                         </div>
