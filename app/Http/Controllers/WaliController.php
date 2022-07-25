@@ -69,7 +69,7 @@ class WaliController extends Controller
     public function show($id)
     {
         //
-        $wali = FindOrFail($id);
+        $wali = Wali::FindOrFail($id);
         return view('wali.show', compact('wali'));
     }
 
