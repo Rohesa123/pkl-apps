@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
+                <div class="card bg-navy">
+                    <div class="card-header border-bottom border-1">
                         Data Wali
                     </div>
                     <div class="card-body">

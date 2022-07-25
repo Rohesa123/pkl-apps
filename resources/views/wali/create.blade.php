@@ -5,8 +5,8 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @include('layouts/_flash')
-                <div class="card">
-                    <div class="card-header">
+                <div class="card bg-navy">
+                    <div class="card-header border-1 border-bottom">
                         Data Wali
                     </div>
                     <div class="card-body">
@@ -46,9 +46,12 @@
                                     </span>
                                 @enderror
                             </div>
-                            <div class="mb-3">
-                                <div class="d-grid gap-2">
+                            <div class="mb-3 d-flex justify-content-center">
+                                <div class="d-flex justify-content-evenly w-50">
                                     <button class="btn btn-primary" type="submit">Save</button>
+                                    <a href="{{ route('siswa.index') }}"
+                                        class="btn btn-sm btn-danger pt-2">Kembali
+                                    </a>
                                 </div>
                             </div>
                         </form>
