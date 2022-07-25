@@ -111,16 +111,16 @@ class WaliController extends Controller
             'id_siswa' => 'required|unique:walis,id_siswa,'.$wali->id,
             'foto' => 'image|max:2048'
         ]);
-        
+
         $wali->nama = $request->nama;
-        if ($request->hasFile('foto') == true) {
+        if ($request->hasfile('foto') == false) {
+            $wali->foto = $wali->foto;
+        } else {
             $wali->deleteImage();
             $image = $request->file('foto');
             $name = rand(1000,9999) . $image->getClientOriginalName();
             $image->move('images/wali/', $name);
             $wali->foto = $name;
-        } else {
-            $wali->foto = "no_image.jpg";
         }
         $wali->id_siswa = $request->id_siswa;
         $wali->save();
