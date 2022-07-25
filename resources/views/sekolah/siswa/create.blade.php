@@ -32,6 +32,44 @@
                                 @enderror
                             </div>
                             <div class="mb-3">
+                                <label class="form-label">Jenis Kelamin</label>
+                                <div class="form-check">
+                                    <input class="form-check-input @error('jenis_kelamin') is-invalid @enderror"
+                                        type="radio" name="jenis_kelamin" value="Laki-laki" id="lk">
+                                    <label class="form-check-label" for="lk">
+                                        Laki-laki
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input @error('jenis_kelamin') is-invalid @enderror"
+                                        type="radio" name="jenis_kelamin" value="Perempuan" id="pr">
+                                    <label class="form-check-label form-label" for="pr">
+                                        Perempuan
+                                    </label>
+                                </div>
+                                @error('jenis_kelamin')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Agama</label>
+                                <select class="form-select @error('agama') is-invalid @enderror" name="agama">
+                                    <option selected hidden disabled>Pilih Agama</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Budha">Budha</option>
+                                    <option value="Konghucu">Konghucu</option>
+                                    <option value="Katolik">Katolik</option>
+                                </select>
+                                @error('agama')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
                                 <label for="alamat">Alamat Siswa</label>
                                 <textarea type="text" name="alamat_siswa" id="alamat" placeholder="Masukkan Alamat"
                                     class="form-control @error('alamat_siswa') is-invalid @enderror"></textarea>

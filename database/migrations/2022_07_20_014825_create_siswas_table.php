@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
             $table->integer('nis')->unique();
             $table->string('nama_siswa');
+            $table->enum('jenis_kelamin',['Laki-laki','Perempuan']);
+            $table->string('agama');
             $table->string('alamat_siswa');
-            $table->date    ('tanggal_lahir');
+            $table->date('tanggal_lahir');
             $table->timestamps();
         });
     }

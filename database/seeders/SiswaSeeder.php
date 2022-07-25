@@ -17,9 +17,9 @@ class SiswaSeeder extends Seeder
     {
         //
         $sampel=[
-            ['nis'=>1001,'nama_siswa'=>'Rohesa','alamat_siswa'=>'Kp Bojong Tanjung 1', 'tanggal_lahir'=>"2005-03-18"],
-            ['nis'=>1002,'nama_siswa'=>'Rehan','alamat_siswa'=>'Kp Bojong Tanjung 2', 'tanggal_lahir'=>"2005-03-20"],
-            ['nis'=>1003,'nama_siswa'=>'Radit','alamat_siswa'=>'Kp Bojong Tanjung 3', 'tanggal_lahir'=>"2005-03-19"]
+            ['nis'=>1001,'nama_siswa'=>'Rohesa','jenis_kelamin' => 'Laki-laki','agama' => 'Islam','alamat_siswa'=>'Kp Bojong Tanjung 1', 'tanggal_lahir'=>"2005-03-18"],
+            ['nis'=>1002,'nama_siswa'=>'Rohesa','jenis_kelamin' => 'Laki-laki','agama' => 'Islam','alamat_siswa'=>'Kp Bojong Tanjung 1', 'tanggal_lahir'=>"2005-03-18"],
+            ['nis'=>1003,'nama_siswa'=>'Rohesa','jenis_kelamin' => 'Laki-laki','agama' => 'Islam','alamat_siswa'=>'Kp Bojong Tanjung 1', 'tanggal_lahir'=>"2005-03-18"],
         ];
 
         DB::table('siswas')->insert($sampel);

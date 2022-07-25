@@ -19,6 +19,14 @@
                             <input type="text" name="nama_siswa" id="nama_siswa" value="{{ $siswa->nama_siswa }}" class="form-control" readonly>
                         </div>
                         <div class="mb-3">
+                            <label for="jenis_kelamin">Jenis Kelamin</label>
+                            <input type="text" name="jenis_kelamin" id="jenis_kelamin" value="{{ $siswa->jenis_kelamin }}" class="form-control" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="agama">Agama</label>
+                            <input type="text" name="agama" id="agama" value="{{ $siswa->agama }}" class="form-control" readonly>
+                        </div>
+                        <div class="mb-3">
                             <label for="alamat">Alamat Siswa</label>
                             <textarea type="text" name="alamat_siswa" id="alamat" class="form-control" readonly>{{ $siswa->alamat_siswa }}</textarea>
                         </div>

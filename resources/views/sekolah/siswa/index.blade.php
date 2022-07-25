@@ -20,6 +20,8 @@
                                         <th>No</th>
                                         <th>Nis</th>
                                         <th>Nama Siswa</th>
+                                        <th>Jenis Kelamin</th>
+                                        <th>Agama</th>
                                         <th>Alamat Siswa</th>
                                         <th>Tanggal Lahir</th>
                                         <th>Action</th>
@@ -32,8 +34,10 @@
                                             <td>{{ $no++ }}</td>
                                             <td>{{ $data->nis }}</td>
                                             <td>{{ $data->nama_siswa }}</td>
+                                            <td>{{ $data->jenis_kelamin}}</td>
+                                            <td>{{ $data->agama}}</td>
                                             <td>{{ $data->alamat_siswa }}</td>
-                                            <td>{{ $data->tanggal_lahir }}</td>
+                                            <td>{{ date('d M Y' , strtotime($data->tanggal_lahir)) }}</td>
                                             <td>
                                                 <form action="{{ route('siswa.destroy', $data->id) }}" method="post">
                                                     @method('delete')

@@ -47,6 +47,8 @@ class SiswaController extends Controller
         $validate = $request->validate([
             'nis' => 'required|unique:siswas',
             'nama_siswa' => 'required',
+            'jenis_kelamin' => 'required',
+            'agama' => 'required',
             'alamat_siswa' => 'required',
             'tanggal_lahir' => 'required'
         ]);
@@ -54,6 +56,8 @@ class SiswaController extends Controller
         $siswa = new Siswa();
         $siswa->nis = $request->nis;
         $siswa->nama_siswa = $request->nama_siswa;
+        $siswa->jenis_kelamin = $request->jenis_kelamin;
+        $siswa->agama = $request->agama;
         $siswa->alamat_siswa = $request->alamat_siswa;
         $siswa->tanggal_lahir = $request->tanggal_lahir;
         $siswa->save();
@@ -100,6 +104,8 @@ class SiswaController extends Controller
         $validate = $request->validate([
             'nis' => 'required|unique:siswas',
             'nama_siswa' => 'required',
+            'jenis_kelamin' => 'required',
+            'agama' => 'required',
             'alamat_siswa' => 'required',
             'tanggal_lahir' => 'required'
         ]);
@@ -107,6 +113,8 @@ class SiswaController extends Controller
         $siswa = Siswa::FindOrFail($id);
         $siswa->nis = $request->nis;
         $siswa->nama_siswa = $request->nama_siswa;
+        $siswa->jenis_kelamin = $request->jenis_kelamin;
+        $siswa->agama = $request->agama;
         $siswa->alamat_siswa = $request->alamat_siswa;
         $siswa->tanggal_lahir = $request->tanggal_lahir;
         $siswa->save();
