@@ -50,16 +50,17 @@ class WaliController extends Controller
         $validated = $request->validate([
             'nama' => 'required',
             'id_siswa' => 'required|unique:walis',
-            'foto' => 'required|image|max:2048'
+            'foto' => 'image|max:2048'
         ]);
-
         $wali = new Wali();
         $wali->nama = $request->nama;
-        if ($request->hasFile('foto')) {
+        if ($request->hasFile('foto') == true) {
             $image = $request->file('foto');
             $name = rand(1000,9999) . $image->getClientOriginalName();
             $image->move('images/wali/', $name);
             $wali->foto = $name;
+        } else {
+            $wali->foto = "no_image.jpg";
         }
         $wali->id_siswa = $request->id_siswa;
         $wali->save();
@@ -103,20 +104,23 @@ class WaliController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $wali = Wali::FindOrFail($id);
+
         $validated = $request->validate([
             'nama' => 'required',
-            'id_siswa' => 'required|unique:walis',
-            'foto' => 'required|image|max:2048'
+            'id_siswa' => 'required|unique:walis,id_siswa,'.$wali->id,
+            'foto' => 'image|max:2048'
         ]);
-
-        $wali = Wali::FindOrFail($id);
+        
         $wali->nama = $request->nama;
-        if ($request->hasFile('foto')) {
+        if ($request->hasFile('foto') == true) {
             $wali->deleteImage();
             $image = $request->file('foto');
             $name = rand(1000,9999) . $image->getClientOriginalName();
             $image->move('images/wali/', $name);
             $wali->foto = $name;
+        } else {
+            $wali->foto = "no_image.jpg";
         }
         $wali->id_siswa = $request->id_siswa;
         $wali->save();
