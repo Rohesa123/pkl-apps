@@ -98,14 +98,14 @@ class JurusanController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $jurusan = Jurusan::FindOrFail($id);
         $validate = $request->validate([
-            'kode_mata_pelajaran' => 'required|unique:jurusans',
+            'kode_mata_pelajaran' => 'required|unique:jurusans,kode_mata_pelajaran,'.$jurusan->id,
             'nama_mata_pelajaran' => 'required',
             'semester' => 'required',
             'jurusan' => 'required'
         ]);
 
-        $jurusan = Jurusan::FindOrFail($id);
         $jurusan->kode_mata_pelajaran = $request->kode_mata_pelajaran;
         $jurusan->nama_mata_pelajaran = $request->nama_mata_pelajaran;
         $jurusan->semester = $request->semester;
