@@ -101,8 +101,9 @@ class SiswaController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $siswa = Siswa::FindOrFail($id);
         $validate = $request->validate([
-            'nis' => 'required|unique:siswas',
+            'nis' => 'required|unique:siswas,nis,'.$siswa->id,
             'nama_siswa' => 'required',
             'jenis_kelamin' => 'required',
             'agama' => 'required',
@@ -110,7 +111,6 @@ class SiswaController extends Controller
             'tanggal_lahir' => 'required'
         ]);
 
-        $siswa = Siswa::FindOrFail($id);
         $siswa->nis = $request->nis;
         $siswa->nama_siswa = $request->nama_siswa;
         $siswa->jenis_kelamin = $request->jenis_kelamin;
