@@ -31,7 +31,23 @@
   <link rel="stylesheet" href="{{asset('assets/plugins/daterangepicker/daterangepicker.css')}}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('assets/plugins/summernote/summernote-bs4.min.css')}}">
+  <style>
+    thead tr th {
+      cursor:default; 
+    }
+    label {
+      display:inline-flex;
+      margin: 5px 0;
+    }
 
+    label * {
+      margin: 0 5px;
+    }
+
+    body {
+      background: #2C3333;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
