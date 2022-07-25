@@ -118,14 +118,14 @@ class NilaiController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $nilai = Nilai::FindOrFail($id);
         $validate = $request->validate([
-            'nis' => 'required|unique:nilais',
-            'kode_mata_pelajaran' => 'required|unique:nilais',
+            'nis' => 'required|unique:nilais,nis,'.$nilai->id,
+            'kode_mata_pelajaran' => 'required|unique:nilais,kode_mata_pelajaran,'.$nilai->id,
             'nilai' => 'required',
             'indeks_nilai' => 'required'
         ]);
 
-        $nilai = Nilai::FindOrFail($id);
         $nilai->nis = $request->nis;
         $nilai->kode_mata_pelajaran = $request->kode_mata_pelajaran;
         $nilai->nilai = $request->nilai;    
