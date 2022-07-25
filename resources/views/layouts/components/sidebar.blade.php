@@ -54,6 +54,12 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="{{route('wali.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon nav-icon"></i> 
+                  <p>Data Wali</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon fas fa-server"></i>
                   <p>

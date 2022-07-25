@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\WaliController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,5 @@ Route::resource('siswa',SiswaController::class);
 Route::resource('nilai',NilaiController::class);
 
 Route::resource('jurusan', JurusanController::class);
+
+Route::resource('wali', WaliController::class);
