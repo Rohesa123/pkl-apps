@@ -42,7 +42,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="grade">Indeks Nilai</label>
-                                <input type="text" name="indeks_nilai" value="" id="grade" readonly placeholder="Nilai Grade"
+                                <input type="text" name="indeks_nilai" id="grade" readonly placeholder="Nilai Grade" value="{{ $nilai->indeks_nilai}}"
                                     class="form-control @error('indeks_nilai') is-invalid @enderror">
                             </div>
                             @error('indeks_nilai')
